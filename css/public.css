@@ -183,3 +183,11 @@ h3.menu-item-title {
     width: 100%;
   }
 }
+
+.ng-valid {
+  border: 2px solid green;
+}
+
+.ng-invalid{
+  border: 2px solid red;
+}
