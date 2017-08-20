@@ -1,0 +1,11 @@
+<h1> Your Information</h1>
+<div ng-if="infoCtrl.getDetails.length">
+  <p>{{infoCtrl.getDetails[0].firstName}}</p>
+  <p>{{infoCtrl.getDetails[0].lastName}}</p>
+  <p>{{infoCtrl.getDetails[0].phoneNumber}}</p>
+  <p>{{infoCtrl.getDetails[0].email}}</p> 
+</div>
+<div ng-if="infoCtrl.getDetails.length === 0">
+  <p>Please sign up</p>
+  <a ui-sref="signup">Sign Up</a>
+</div>
