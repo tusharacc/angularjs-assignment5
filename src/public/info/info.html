@@ -1,9 +1,27 @@
 <h1> Your Information</h1>
 <div ng-if="infoCtrl.getDetails.length">
-  <p>{{infoCtrl.getDetails[0].firstName}}</p>
-  <p>{{infoCtrl.getDetails[0].lastName}}</p>
-  <p>{{infoCtrl.getDetails[0].phoneNumber}}</p>
-  <p>{{infoCtrl.getDetails[0].email}}</p> 
+  <table class="table table-sm table-inverse">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Phone Number</th>
+      <th>Email</th>
+      <th>Favorite Menu</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat='detail in infoCtrl.getDetails track by $index'>
+      <th scope="row">{{$index+1}}</th>
+      <td>{{detail.firstName}}</td>
+      <td>{{detail.lastName}}</td>
+      <td>{{detail.phoneNumber}}</td>
+      <td>{{detail.email}}</td>
+      <td>{{detail.menunumber}}</td>
+    </tr>
+  </tbody>
+</table>
 </div>
 <div ng-if="infoCtrl.getDetails.length === 0">
   <p>Please sign up</p>
